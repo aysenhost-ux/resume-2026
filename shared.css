@@ -307,6 +307,21 @@ body {
   padding-top: 0;
   gap: 0.4rem;
 }
+
+/* PC 端：隐藏简介卡片 + 姓名上下排版 */
+@media (min-width: 769px) {
+  .panel-about .about-summary-card {
+    display: none !important;
+  }
+  .panel-about .about-name-role {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.2rem !important;
+  }
+  .panel-about .about-name-sep {
+    display: none !important;
+  }
+}
 .about-info-label {
   font-family: 'GeistMono', monospace;
   font-size: clamp(1rem, 1.1vw, 1.3rem);
