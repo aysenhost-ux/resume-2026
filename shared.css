@@ -829,6 +829,32 @@ body {
   color: var(--dim);
 }
 
+.footer-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'GeistMono', monospace;
+  font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--accent);
+  background: var(--accent-glow);
+  transition: all 0.3s ease;
+  margin-bottom: 2.5rem;
+  cursor: pointer;
+}
+.footer-download-btn:hover {
+  background: var(--accent);
+  color: var(--bg);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(74,222,128,0.25);
+}
+.download-icon {
+  font-size: 1.2em;
+}
+
 .fixed-nav {
   position: fixed;
   top: 0;
@@ -1462,6 +1488,12 @@ body {
   }
   .panel-footer .footer-subtitle {
     font-size: clamp(1.2rem, 3vw, 1.6rem) !important;
+    margin-bottom: 1.5rem !important;
+  }
+  .panel-footer .footer-download-btn {
+    font-size: clamp(0.8rem, 2.5vw, 1rem) !important;
+    padding: 0.6rem 1.5rem !important;
+    margin-bottom: 1.5rem !important;
   }
   .panel-footer .footer-contact-grid {
     flex-direction: column !important;

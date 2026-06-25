@@ -300,6 +300,10 @@
     <div class="panel-inner">
       <h2 class="footer-title" data-animate>创造卓越体验</h2>
       <p class="footer-subtitle" data-animate>期待与您联系</p>
+      <a href="./assets/任壮志-产品设计师-6年经验.pdf" download class="footer-download-btn" data-animate id="resumeDownloadBtn">
+        <span class="download-icon">↓</span>
+        下载简历
+      </a>
       <div class="footer-contact-grid" data-animate>
         <div class="footer-contact-item">
           <div class="footer-contact-label">Email</div>
@@ -349,6 +353,19 @@
     if (e.target.tagName === 'IMG') {
       e.preventDefault();
     }
+  });
+
+  // ===== 强制下载简历（避免浏览器预览 PDF） =====
+  document.getElementById('resumeDownloadBtn').addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    const link = document.createElement('a');
+    link.href = this.href;
+    link.download = '任壮志-产品设计师-6年经验.pdf';
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   });
 
   // ===== Configuration =====
